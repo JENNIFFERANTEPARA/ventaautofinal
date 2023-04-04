@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {faStar} from '@fortawesome/free-solid-svg-icons';
+//import {faStar} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-calificacion',
@@ -12,7 +12,7 @@ export class CalificacionComponent implements OnInit {
   @Input()calificacion  : any = 0;
   @Output()select = new EventEmitter <any>();
   
-  faStar = faStar;
+  //faStar = faStar;
   
   lista:any[]=[];
   
