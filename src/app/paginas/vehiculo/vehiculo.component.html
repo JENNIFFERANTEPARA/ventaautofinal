@@ -1,0 +1,92 @@
+<div>
+  <nav class="navbar navbar-expand navbar-light bg-light">
+  <h4>Lista de Vehiculo</h4>
+  <ul class="nav nav-pills mx-3">
+  <li><a class='nav-link' routerLink="app-primera">Inicio</a></li>
+  <li><a class='nav-link' routerLink="app-primera">Automóviles</a></li><br>
+  <li><a class='nav-link' routerLink="app-primera">Registrarse</a></li>
+  </ul>
+  </nav>
+  <div class="container">
+   
+   </div>
+    </div>
+    <br>   
+    <div class="card-body">
+      <div class="row">
+        <div class="mb3">
+          <label class="from-label">FILTRAR POR: </label>
+          <input type="text" class="from-control" [(ngModel)]="filtrarpor">
+        </div>  
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-6">
+          <button class="btn btn-primary" data-bs-toggle="modal"data-bs-target="#exampleModal">Nuevo:</button>
+        </div>  
+      </div>
+      <hr>
+      <div class="row">
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th colspan="7">
+              <button class="btn btn-success" (click)="MostrarImagen = !MostrarImagen">Mostrar Imagenes</button> 
+            </th>
+          </tr>
+          <tr>
+            <th>Imagen</th>
+            <th scope="col">Codigo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Año</th>
+            <th scope="col">Calificacion</th>
+            <th scope=>Opciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of listaVehiculo">
+            <td style="width: 10%;">
+              
+              <img class="img-thumbnail" [src]="vehiculo.foto" *ngIf="MostrarImagen">
+            </td>
+            <td>{{vehiculo.codigo}}</td>
+            <td>{{vehiculo.marca}}</td>
+            <td>{{vehiculo.modelo}}</td>
+            <td>{{vehiculo.anio}}</td>
+            <td>
+             
+            </td>
+            <td></td>
+            </tr>
+          <tr>
+            <th scope="row"> </th>
+            <th scope="row">005</th>
+            <td>CHEVROLET</td>
+            <td>ONIX</td>
+            <td>2023</td>
+            <th scope="row">5</th>
+            <th scope="row"> </th>
+          </tr> 
+          <tr>
+            <th scope="row"> </th>
+            <th scope="row">006</th>
+            <td>CHEVROLET</td>
+            <td>ONIX</td>
+            <td>2023</td>
+            <th scope="row">3 </th>
+            <th scope="row"> </th>
+          </tr>
+          <tr>
+            <th scope="row"> </th>
+            <th scope="row">003</th>
+            <td>NISSAN</td>
+            <td>Sentra</td>
+            <td>2023</td>
+            <th scope="row"> </th>
+            <th scope="row"> </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
